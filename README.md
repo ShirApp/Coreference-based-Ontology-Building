@@ -35,9 +35,15 @@ source coref-venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Define the following things (in the jupyter notebook) and run the notebook:
-  - weighted_graph_clean: CSV file containing phrases relations along with weights (columns: "node1", "node2", "weight")
-  - clean2phrases: JSON file mapping clean phrases to their original forms and occurrences. This file should be created as a part of the cleaning.
-  - data_path: Path where the above data files are located.
+4. Run Coreference Resolution algorithm (we recommend [fastcoref](https://github.com/shon-otmazgin/fastcoref)) on your corpus.
+
+5. Use the "create_clean_nodes" script to create the following files:
+   - "weighted_pairs.csv" - containing the pairs of clean phrases occurrences with their frequency.
+   - "phrase2clean.pkl" - including a dict of the clean phrases and their original occurrences.
+
+   ** The input to the script is a file where each line contains a coreference chain and its phrases are seperated by TAB.
+
+6. Define the following path (in the jupyter notebook) and run the notebook:
+   - data_path - path where the data files from the step above are located.
 
 ## Citation
