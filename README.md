@@ -37,11 +37,15 @@ pip install -r requirements.txt
 
 4. Run Coreference Resolution algorithm (we recommend [fastcoref](https://github.com/shon-otmazgin/fastcoref)) on your corpus.
 
-5. Use the "create_clean_nodes" script to create the following files:
-   - "weighted_pairs.csv" - containing the pairs of clean phrases occurrences with their frequency.
-   - "phrase2clean.pkl" - including a dict of the clean phrases and their original occurrences.
+5. Run the "create_clean_nodes" script with the path to your coreference chains file:
+```
+python create_clean_nodes.py --file_path coref_chains.csv
+```
+The script will create a folder named "data" that contains the following files:
+   - "weighted_pairs.csv" - The pairs of clean phrases occurrences with their frequency.
+   - "phrase2clean.pkl" - A dict of the clean phrases and their original occurrences.
 
-   ** The input to the script is a file where each line contains a coreference chain and its phrases are seperated by TAB.
+** The input to the script is a file where each line contains a coreference chain and its phrases are seperated by TAB.
 
 6. Define the following path (in the jupyter notebook) and run the notebook:
    - data_path - path where the data files from the step above are located.
