@@ -51,3 +51,15 @@ The script will create a folder named "data" that contains the following files:
    - data_path - path where the data files from the step above are located.
 
 ## Citation
+
+```
+@misc{ashurytahan2024datadrivencoreferencebasedontologybuilding,
+      title={Data-driven Coreference-based Ontology Building}, 
+      author={Shir Ashury-Tahan and Amir David Nissan Cohen and Nadav Cohen and Yoram Louzoun and Yoav Goldberg},
+      year={2024},
+      eprint={2410.17051},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.17051}, 
+}
+```
